@@ -1,0 +1,146 @@
+{
+  "aktivnosti": [
+    {
+      "id": "553e",
+      "organizator": {
+        "ime": "dfsfsg",
+        "prezime": "fdsgsfg",
+        "imeUdruge": "Šumarak"
+      },
+      "dogadaj": {
+        "naziv": "gsgfsg",
+        "opis": "fsdgfsfg",
+        "lokacija": "Trogir",
+        "startDate": "8/5/2024",
+        "startTime": "13:00",
+        "endDate": "15/5/2024",
+        "endTime": "14:00"
+      }
+    },
+    {
+      "id": "8131",
+      "organizator": {
+        "ime": "www",
+        "prezime": "www",
+        "imeUdruge": "Šumarak"
+      },
+      "dogadaj": {
+        "naziv": "wwww",
+        "opis": "wwww",
+        "lokacija": "Dugopolje",
+        "startDate": "28/5/2024",
+        "startTime": "00:31",
+        "endDate": "29/5/2024",
+        "endTime": "00:37"
+      }
+    },
+    {
+      "id": "2d2c",
+      "organizator": {
+        "ime": "sdfsaf",
+        "prezime": "sadfsa",
+        "imeUdruge": ""
+      },
+      "dogadaj": {
+        "naziv": "asfasf",
+        "opis": "sfsadsf",
+        "lokacija": "Stari Grad, Hvar",
+        "startDate": "22/5/2024",
+        "startTime": "00:59",
+        "endDate": "29/5/2024",
+        "endTime": "00:59"
+      }
+    }
+  ],
+  "gradovi": [
+    {
+      "idGrad": "1",
+      "imeGrada": "Split",
+      "id": "3894"
+    },
+    {
+      "idGrad": "2",
+      "imeGrada": "Trogir",
+      "id": "2b77"
+    },
+    {
+      "idGrad": "3",
+      "imeGrada": "Sinj",
+      "id": "ccd5"
+    },
+    {
+      "idGrad": "4",
+      "imeGrada": "Dugopolje",
+      "id": "9144"
+    },
+    {
+      "idGrad": "5",
+      "imeGrada": "Omiš",
+      "id": "cee0"
+    },
+    {
+      "idGrad": "6",
+      "imeGrada": "Imotski",
+      "id": "c414"
+    },
+    {
+      "idGrad": "7",
+      "imeGrada": "Makarska",
+      "id": "eaa5"
+    },
+    {
+      "idGrad": "8",
+      "imeGrada": "Milna",
+      "id": "5992"
+    },
+    {
+      "idGrad": "9",
+      "imeGrada": "Stari Grad, Hvar",
+      "id": "2117"
+    }
+  ],
+  "udruge": [
+    {
+      "imeUdruge": "Čisto More",
+      "id": "ef9b"
+    },
+    {
+      "imeUdruge": "Šumarak",
+      "id": "88f5"
+    }
+  ],
+  "volonteri": [
+    {
+      "imeVolontera": "Luka",
+      "prezimeVolontera": "Lukić",
+      "lokacija": "Split",
+      "dob": 24,
+      "spol": "Male",
+      "id": "612d"
+    },
+    {
+      "imeVolontera": "Mate",
+      "prezimeVolontera": "Matić",
+      "lokacija": "Split",
+      "dob": 22,
+      "spol": "Male",
+      "id": "732d"
+    },
+    {
+      "imeVolontera": "Petra",
+      "prezimeVolontera": "Perić",
+      "lokacija": "Omiš",
+      "dob": 20,
+      "spol": "Female",
+      "id": "6a83"
+    },
+    {
+      "id": "e959",
+      "imeVolontera": "laura",
+      "prezimeVolontera": "lauric",
+      "dob": "34",
+      "spol": "Female",
+      "lokacija": "Split"
+    }
+  ]
+}
