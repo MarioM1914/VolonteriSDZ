@@ -16,45 +16,39 @@ import Volonter from "./pages/Volonter";
 function App() {
   const [aktivnosti, setAktivnosti] = useState([]);
   const [volonteri, setVolonteri] = useState([]);
-  // const [detaljiAktivnosti, setDetaljiAktivnosti] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3007/aktivnosti")
-      .then((res) => setAktivnosti(res.data));
-
-      axios
-      .get("http://localhost:3007/volonteri")
-      .then((res) => setVolonteri(res.data));
+    fetchAktivnosti();
+    fetchVolontere();
   }, []);
 
-  const dohvatiAktivnosti = () => {
-    axios
-      .get("http://localhost:3007/aktivnosti")
-      .then((res) => setAktivnosti(res.data));
+  const fetchAktivnosti = async () => {
+    try {
+      const response = await axios.get("http://localhost:3007/aktivnosti");
+      setAktivnosti(response.data);
+    } catch (error) {
+      console.error("Error fetching aktivnosti:", error);
+    }
   };
 
-  // const dohvatiDetaljeAktivnosti = (idPodatka) => {
-  //   axios
-  //     .get(`http://localhost:3007/aktivnosti/${idPodatka}`)
-  //     .then((res) => setDetaljiAktivnosti(res.data));
-  // };
-
-  const dohvatiVolontera = () => {
-    axios
-      .get("http://localhost:3007/volonteri")
-      .then((res) => setVolonteri(res.data));
+  const fetchVolontere = async () => {
+    try {
+      const response = await axios.get("http://localhost:3007/volonteri");
+      setVolonteri(response.data);
+    } catch (error) {
+      console.error("Error fetching volontere:", error);
+    }
   };
 
   const obrisiAktivnost = (idPodatka) => {
     axios.delete(`http://localhost:3007/aktivnosti/${idPodatka}`).then(() => {
-      dohvatiAktivnosti();
+      fetchAktivnosti();
     });
   };
 
   const obrisiVolontera = (idPodatka) => {
     axios.delete(`http://localhost:3007/volonteri/${idPodatka}`).then(() => {
-      dohvatiVolontera();
+      fetchVolontere();
     });
   };
 
@@ -65,12 +59,30 @@ function App() {
         <Routes>
           <Route path="/" element={<Pocetna />} />
           <Route path="/aktivnosti">
-            <Route index element={<Aktivnosti aktivnosti={aktivnosti} dodaj={setAktivnosti} obrisiAktivnost={obrisiAktivnost} />}/> {/* index means the path is whatever the parent is  */}
-            <Route path="aktivnost/:id" element={<Aktivnost aktivnosti={aktivnosti} />} />
+            <Route
+              index
+              element={
+                <Aktivnosti
+                  aktivnosti={aktivnosti}
+                  dodaj={setAktivnosti}
+                  obrisiAktivnost={obrisiAktivnost}
+                />
+              }
+            />{" "}
+            {/* index means the path is whatever the parent is  */}
             <Route path="aktivnost/uredi/:id" element={<UrediFormu />} />
           </Route>
           <Route path="/volonteri">
-            <Route index element={<Volonteri volonteri={volonteri} dodajVolontera={setVolonteri} obrisiVolontera={obrisiVolontera} />} />
+            <Route
+              index
+              element={
+                <Volonteri
+                  volonteri={volonteri}
+                  dodajVolontera={setVolonteri}
+                  obrisiVolontera={obrisiVolontera}
+                />
+              }
+            />
             <Route path="volonter/:id" element={<Volonter />} />
           </Route>
           <Route path="/udruge" element={<Udruge />} />

@@ -3,22 +3,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Modal } from "flowbite-react";
 import Aktivnost from "../pages/Aktivnost";
+import Volonter from "../pages/Volonter";
 
-function RedakListe({
-  akt,
-  obrisiAktivnost,
-  type,
-  vol,
-  obrisiVolontera
-}) {
-
+function RedakListe({ akt, obrisiAktivnost, type, vol, obrisiVolontera }) {
   const [openModal, setOpenModal] = useState(false);
 
   function onCloseModal() {
-    setOpenModal(false);
-  }
-
-  function handleSubmit() {
     setOpenModal(false);
   }
 
@@ -64,33 +54,21 @@ function RedakListe({
         {type === "aktivnosti" && (
           <td className="flex flex-col justify-around md:flex-row">
             <td className="py-4">
-              {/* <Link
-                to={`/aktivnosti/aktivnost/${akt.id}`}
-                className="text-white shadow-lg bg-teal-500 hover:bg-teal-600 focus:ring-2 font-medium rounded-lg text-sm px-3 py-1 focus:outline-none"
-              > */}
               <button
-                // type="button"
                 onClick={() => setOpenModal(true)}
-                // onClick={openModal}
-                // data-modal-target="editUserModal"
-                // data-modal-show="editUserModal"
                 className="text-white shadow-lg bg-teal-500 hover:bg-teal-600 focus:ring-2 font-medium rounded-lg text-sm px-3 py-1 focus:outline-none"
               >
                 Detalji
               </button>
-              {/* </Link> */}
               <Modal
                 show={openModal}
                 size="4xl"
                 onClose={onCloseModal}
-                onSubmit={handleSubmit}
                 popup
               >
                 <Modal.Header />
                 <Modal.Body>
-                  <Aktivnost
-                    akt={akt}
-                  />
+                  <Aktivnost akt={akt} />
                 </Modal.Body>
               </Modal>
             </td>
@@ -120,13 +98,24 @@ function RedakListe({
         )}
         {type === "volonteri" && (
           <td className="flex flex-col justify-around md:flex-row">
-            <td className="py-5">
-              <Link
-                to={`/volonteri/volonter/${vol.id}`}
+            <td className="py-4">
+            <button
+                onClick={() => setOpenModal(true)}
                 className="text-white shadow-lg bg-teal-500 hover:bg-teal-600 focus:ring-2 font-medium rounded-lg text-sm px-3 py-1 focus:outline-none"
               >
                 Detalji
-              </Link>
+              </button>
+              <Modal
+                show={openModal}
+                size="4xl"
+                onClose={onCloseModal}
+                popup
+              >
+                <Modal.Header />
+                <Modal.Body>
+                  <Volonter vol={vol} />
+                </Modal.Body>
+              </Modal>
             </td>
             <td className="py-4">
               <Link to={`/volonteri/volonter/uredi/${vol.id}`}>

@@ -174,7 +174,7 @@ function UnosForma(props) {
                   htmlFor="imeUdruge"
                   className="block mb-2 text-sm font-medium text-gray-900"
                 >
-                  Udruga
+                  Udruga (ako organizirate u ime udruge)
                 </label>
                 <select
                   name="imeUdruge"

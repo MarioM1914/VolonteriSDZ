@@ -35,20 +35,37 @@
       }
     },
     {
-      "id": "2d2c",
+      "id": "431d",
       "organizator": {
-        "ime": "sdfsaf",
-        "prezime": "sadfsa",
+        "ime": "ante",
+        "prezime": "matic",
         "imeUdruge": ""
       },
       "dogadaj": {
-        "naziv": "asfasf",
-        "opis": "sfsadsf",
-        "lokacija": "Stari Grad, Hvar",
+        "naziv": "ajde",
+        "opis": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "lokacija": "Dugopolje",
+        "startDate": "9/5/2024",
+        "startTime": "14:46",
+        "endDate": "9/5/2024",
+        "endTime": "17:46"
+      }
+    },
+    {
+      "id": "b9e0",
+      "organizator": {
+        "ime": "idemo",
+        "prezime": "raditi",
+        "imeUdruge": "Čisto More"
+      },
+      "dogadaj": {
+        "naziv": "idemo raditi",
+        "opis": "idemo raditi",
+        "lokacija": "Imotski",
         "startDate": "22/5/2024",
-        "startTime": "00:59",
-        "endDate": "29/5/2024",
-        "endTime": "00:59"
+        "startTime": "16:07",
+        "endDate": "31/5/2024",
+        "endTime": "15:08"
       }
     }
   ],
@@ -135,12 +152,20 @@
       "id": "6a83"
     },
     {
-      "id": "e959",
-      "imeVolontera": "laura",
-      "prezimeVolontera": "lauric",
-      "dob": "34",
+      "id": "19b7",
+      "imeVolontera": "Jadranka",
+      "prezimeVolontera": "Jadric",
+      "dob": "23",
       "spol": "Female",
-      "lokacija": "Split"
+      "lokacija": "Trogir"
+    },
+    {
+      "id": "8713",
+      "imeVolontera": "Ivan",
+      "prezimeVolontera": "Ivanic",
+      "dob": "35",
+      "spol": "Male",
+      "lokacija": "Stari Grad, Hvar"
     }
   ]
 }
