@@ -2,7 +2,7 @@ import React from "react";
 import RedakListe from "./RedakListe";
 import DodajAktivnostButton from "./DodajAktivnostButton";
 
-function AktivnostiLista({ aktivnosti, dodaj, obrisiAktivnost }) {
+function AktivnostiLista({ aktivnosti, dodaj, obrisiAktivnost, fetchAktivnosti }) {
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <div className="flex items-center justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 py-4 pl-2 bg-white">
@@ -60,6 +60,7 @@ function AktivnostiLista({ aktivnosti, dodaj, obrisiAktivnost }) {
               type="aktivnosti"
               akt={aktivnost}
               obrisiAktivnost={obrisiAktivnost}
+              fetchAktivnosti={fetchAktivnosti}
             />
           ))}
         </tbody>

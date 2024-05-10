@@ -1,7 +1,7 @@
 import React from "react";
 import AktivnostiLista from "../components/AktivnostiLista";
 
-function Aktivnosti({aktivnosti, dodaj, obrisiAktivnost }) {
+function Aktivnosti({aktivnosti, dodaj, obrisiAktivnost, fetchAktivnosti }) {
 
   return (
     <>
@@ -13,6 +13,7 @@ function Aktivnosti({aktivnosti, dodaj, obrisiAktivnost }) {
           aktivnosti={aktivnosti}
           dodaj={dodaj}
           obrisiAktivnost={obrisiAktivnost}
+          fetchAktivnosti={fetchAktivnosti}
         />
       </div>
     </>

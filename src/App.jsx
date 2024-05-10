@@ -66,11 +66,12 @@ function App() {
                   aktivnosti={aktivnosti}
                   dodaj={setAktivnosti}
                   obrisiAktivnost={obrisiAktivnost}
+                  fetchAktivnosti={fetchAktivnosti}
                 />
               }
             />{" "}
             {/* index means the path is whatever the parent is  */}
-            <Route path="aktivnost/uredi/:id" element={<UrediFormu />} />
+            {/* <Route path="aktivnost/uredi/:id" element={<UrediFormu />} /> */}
           </Route>
           <Route path="/volonteri">
             <Route
@@ -80,6 +81,7 @@ function App() {
                   volonteri={volonteri}
                   dodajVolontera={setVolonteri}
                   obrisiVolontera={obrisiVolontera}
+                  fetchVolontere={fetchVolontere}
                 />
               }
             />

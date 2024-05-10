@@ -1,7 +1,7 @@
 import React from "react";
 import VolonteriLista from "../components/VolonteriLista";
 
-function Volonteri({volonteri, dodajVolontera, obrisiVolontera}) {
+function Volonteri({volonteri, dodajVolontera, obrisiVolontera, fetchVolontere }) {
   return (
     <>
     <div className="pb-24 pt-4">
@@ -12,6 +12,7 @@ function Volonteri({volonteri, dodajVolontera, obrisiVolontera}) {
           volonteri={volonteri}
           dodajVolontera={dodajVolontera}
           obrisiVolontera={obrisiVolontera}
+          fetchVolontere={fetchVolontere}
         />
       </div>
     </>

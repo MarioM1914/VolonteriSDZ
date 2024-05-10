@@ -1,71 +1,105 @@
 {
   "aktivnosti": [
     {
-      "id": "553e",
+      "id": "74ee",
       "organizator": {
-        "ime": "dfsfsg",
-        "prezime": "fdsgsfg",
-        "imeUdruge": "Šumarak"
-      },
-      "dogadaj": {
-        "naziv": "gsgfsg",
-        "opis": "fsdgfsfg",
-        "lokacija": "Trogir",
-        "startDate": "8/5/2024",
-        "startTime": "13:00",
-        "endDate": "15/5/2024",
-        "endTime": "14:00"
-      }
-    },
-    {
-      "id": "8131",
-      "organizator": {
-        "ime": "www",
-        "prezime": "www",
-        "imeUdruge": "Šumarak"
-      },
-      "dogadaj": {
-        "naziv": "wwww",
-        "opis": "wwww",
-        "lokacija": "Dugopolje",
-        "startDate": "28/5/2024",
-        "startTime": "00:31",
-        "endDate": "29/5/2024",
-        "endTime": "00:37"
-      }
-    },
-    {
-      "id": "431d",
-      "organizator": {
-        "ime": "ante",
-        "prezime": "matic",
-        "imeUdruge": ""
-      },
-      "dogadaj": {
-        "naziv": "ajde",
-        "opis": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "lokacija": "Dugopolje",
-        "startDate": "9/5/2024",
-        "startTime": "14:46",
-        "endDate": "9/5/2024",
-        "endTime": "17:46"
-      }
-    },
-    {
-      "id": "b9e0",
-      "organizator": {
-        "ime": "idemo",
-        "prezime": "raditi",
+        "ime": "Marko",
+        "prezime": "Marić",
         "imeUdruge": "Čisto More"
       },
       "dogadaj": {
-        "naziv": "idemo raditi",
-        "opis": "idemo raditi",
+        "naziv": "Čišćenje mora",
+        "opis": "Čišćenje mora u Splitu, od Zente do Bačvica.",
+        "lokacija": "Split",
+        "startDate": "2024-05-17",
+        "startTime": "08:00",
+        "endDate": "2024-05-18",
+        "endTime": "16:00"
+      }
+    },
+    {
+      "id": "f1d9",
+      "organizator": {
+        "ime": "Luka",
+        "prezime": "Lucic",
+        "imeUdruge": "Šumarak"
+      },
+      "dogadaj": {
+        "naziv": "Pošumljavanje Marjana",
+        "opis": "Sadnja borova na Marjanu",
+        "lokacija": "Split",
+        "startDate": "2024-05-17",
+        "startTime": "08:00",
+        "endDate": "2024-05-19",
+        "endTime": "19:00"
+      }
+    },
+    {
+      "id": "2252",
+      "organizator": {
+        "ime": "Iva",
+        "prezime": "Ivić",
+        "imeUdruge": ""
+      },
+      "dogadaj": {
+        "naziv": "Čišćenje plaža",
+        "opis": "Čišćenje omiških plaža",
+        "lokacija": "Omiš",
+        "startDate": "2024-05-27",
+        "startTime": "07:00",
+        "endDate": "2024-05-27",
+        "endTime": "20:00"
+      }
+    },
+    {
+      "id": "f539",
+      "organizator": {
+        "ime": "Pero",
+        "prezime": "Perić",
+        "imeUdruge": "Šumarak"
+      },
+      "dogadaj": {
+        "naziv": "Čišćenje šuma",
+        "opis": "Prikupljanje smeća po šumama na području Imotske krajine.",
         "lokacija": "Imotski",
-        "startDate": "22/5/2024",
-        "startTime": "16:07",
-        "endDate": "31/5/2024",
-        "endTime": "15:08"
+        "startDate": "2024-05-22",
+        "startTime": "09:00",
+        "endDate": "2024-05-26",
+        "endTime": "20:00"
+      }
+    },
+    {
+      "id": "d151",
+      "organizator": {
+        "ime": "Josipa",
+        "prezime": "Josipović",
+        "imeUdruge": ""
+      },
+      "dogadaj": {
+        "naziv": "Organiziranje festivala",
+        "opis": "Pomoć u organizaciji festivala.",
+        "lokacija": "Sinj",
+        "startDate": "2024-05-15",
+        "startTime": "08:00",
+        "endDate": "2024-05-17",
+        "endTime": "20:00"
+      }
+    },
+    {
+      "id": "2a0c",
+      "organizator": {
+        "ime": "Antonio",
+        "prezime": "Jurić",
+        "imeUdruge": ""
+      },
+      "dogadaj": {
+        "naziv": "Darivanje krvi",
+        "opis": "Darivanje krvi u Trogiru.",
+        "lokacija": "Trogir",
+        "startDate": "2024-05-27",
+        "startTime": "08:00",
+        "endDate": "2024-05-28",
+        "endTime": "20:00"
       }
     }
   ],
@@ -130,8 +164,8 @@
     {
       "imeVolontera": "Luka",
       "prezimeVolontera": "Lukić",
-      "lokacija": "Split",
-      "dob": 24,
+      "lokacija": "Dugopolje",
+      "dob": "27",
       "spol": "Male",
       "id": "612d"
     },

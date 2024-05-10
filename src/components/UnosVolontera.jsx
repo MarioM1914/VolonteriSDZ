@@ -116,7 +116,7 @@ function UnosVolontera(props) {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 required
               >
-                <option value="">-- Odaberi spol --</option>
+                <option value="">-- Odaberite spol --</option>
                 <option key="Male" value="Male">
                   Male
                 </option>
@@ -140,7 +140,7 @@ function UnosVolontera(props) {
                 required
               >
                 <option value="" selected>
-                  -- Odaberi grad --
+                  -- Odaberite grad --
                 </option>
                 {gradovi.map((grad) => (
                   <option key={grad.idGrad} value={grad.imeGrada}>

@@ -65,20 +65,20 @@ function UnosForma(props) {
     setPodatke({ ...formaPodaci, [name]: value });
   }
 
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
-  };
+  // const formatDate = (dateString) => {
+  //   const date = new Date(dateString);
+  //   const day = date.getDate();
+  //   const month = date.getMonth() + 1;
+  //   const year = date.getFullYear();
+  //   return `${day}/${month}/${year}`;
+  // };
 
   const handleDateTimeChange = (startDate, startTime, endDate, endTime) => {
     setPodatke({
       ...formaPodaci,
-      startDate: formatDate(startDate),
+      startDate,
       startTime,
-      endDate: formatDate(endDate),
+      endDate,
       endTime,
     });
 

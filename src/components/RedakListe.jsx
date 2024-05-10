@@ -1,15 +1,40 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Modal } from "flowbite-react";
 import Aktivnost from "../pages/Aktivnost";
 import Volonter from "../pages/Volonter";
+import UrediFormu from "./UrediFormu";
+import UrediFormuVolontera from "./UrediFormuVolontera";
 
-function RedakListe({ akt, obrisiAktivnost, type, vol, obrisiVolontera }) {
+function RedakListe({ akt, obrisiAktivnost, type, vol, obrisiVolontera, fetchVolontere, fetchAktivnosti }) {
   const [openModal, setOpenModal] = useState(false);
+  const [openModalEdit, setOpenModalEdit] = useState(false);
+  const [isEdit, setIsEdit] = useState(false);
+  const [isEditVolonter, setIsEditVolonter] = useState(false);
+  const [openModalEditVolonter, setOpenModalEditVolonter] = useState(false);
 
   function onCloseModal() {
     setOpenModal(false);
+  }
+
+  function onCloseModalEdit() {
+    setOpenModalEdit(false);
+    setIsEdit(false);
+  }
+
+  function onCloseModalEditVolonter() {
+    setOpenModalEditVolonter(false);
+    setIsEditVolonter(false);
+  }
+
+  function handleClick() {
+    if (type === "aktivnosti") {
+      setIsEdit(true);
+      setOpenModalEdit(true);
+    } else if (type === "volonteri") {
+      setIsEditVolonter(true);
+      setOpenModalEditVolonter(true);
+    }
   }
 
   return (
@@ -60,12 +85,7 @@ function RedakListe({ akt, obrisiAktivnost, type, vol, obrisiVolontera }) {
               >
                 Detalji
               </button>
-              <Modal
-                show={openModal}
-                size="4xl"
-                onClose={onCloseModal}
-                popup
-              >
+              <Modal show={openModal} size="4xl" onClose={onCloseModal} popup>
                 <Modal.Header />
                 <Modal.Body>
                   <Aktivnost akt={akt} />
@@ -73,18 +93,31 @@ function RedakListe({ akt, obrisiAktivnost, type, vol, obrisiVolontera }) {
               </Modal>
             </td>
             <td className="py-4">
-              <Link to={`/aktivnosti/aktivnost/uredi/${akt.id}`}>
+              {isEdit ? (
+                <Modal
+                  show={openModalEdit}
+                  size="4xl"
+                  onClose={onCloseModalEdit}
+                  popup
+                >
+                  <Modal.Header />
+                  <Modal.Body>
+                    <UrediFormu
+                      akt={akt}
+                      promijeniAktivnost={() => setIsEdit(false)}
+                      fetchAktivnosti={fetchAktivnosti}
+                    />
+                  </Modal.Body>
+                </Modal>
+              ) : (
                 <button
                   // type="button"
-                  // onClick={() => setOpenModal(true)}
-                  // onClick={openModal}
-                  // data-modal-target="editUserModal"
-                  // data-modal-show="editUserModal"
+                  onClick={handleClick}
                   className="text-white shadow-lg bg-blue-600 hover:bg-blue-700 focus:ring-2 font-medium rounded-lg text-sm px-3 py-1 focus:outline-none"
                 >
                   Uredi
                 </button>
-              </Link>
+              )}
             </td>
             <td className="py-4">
               <button
@@ -99,18 +132,13 @@ function RedakListe({ akt, obrisiAktivnost, type, vol, obrisiVolontera }) {
         {type === "volonteri" && (
           <td className="flex flex-col justify-around md:flex-row">
             <td className="py-4">
-            <button
+              <button
                 onClick={() => setOpenModal(true)}
                 className="text-white shadow-lg bg-teal-500 hover:bg-teal-600 focus:ring-2 font-medium rounded-lg text-sm px-3 py-1 focus:outline-none"
               >
                 Detalji
               </button>
-              <Modal
-                show={openModal}
-                size="4xl"
-                onClose={onCloseModal}
-                popup
-              >
+              <Modal show={openModal} size="4xl" onClose={onCloseModal} popup>
                 <Modal.Header />
                 <Modal.Body>
                   <Volonter vol={vol} />
@@ -118,17 +146,31 @@ function RedakListe({ akt, obrisiAktivnost, type, vol, obrisiVolontera }) {
               </Modal>
             </td>
             <td className="py-4">
-              <Link to={`/volonteri/volonter/uredi/${vol.id}`}>
+              {isEditVolonter ? (
+                <Modal
+                  show={openModalEditVolonter}
+                  size="4xl"
+                  onClose={onCloseModalEditVolonter}
+                  popup
+                >
+                  <Modal.Header />
+                  <Modal.Body>
+                    <UrediFormuVolontera
+                      vol={vol}
+                      promijeniVolontera={() => setIsEditVolonter(false)}
+                      fetchVolontere={fetchVolontere}
+                    />
+                  </Modal.Body>
+                </Modal>
+              ) : (
                 <button
-                  type="button"
-                  // onClick={openModal}
-                  // data-modal-target="editUserModal"
-                  // data-modal-show="editUserModal"
+                  // type="button"
+                  onClick={handleClick}
                   className="text-white shadow-lg bg-blue-600 hover:bg-blue-700 focus:ring-2 font-medium rounded-lg text-sm px-3 py-1 focus:outline-none"
                 >
                   Uredi
                 </button>
-              </Link>
+              )}
             </td>
             <td className="py-4">
               <button
