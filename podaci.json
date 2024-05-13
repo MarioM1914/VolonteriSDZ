@@ -153,11 +153,21 @@
   "udruge": [
     {
       "imeUdruge": "Čisto More",
+      "adresa": "Mažuranićevo šetalište 25",
+      "lokacija": "Split",
       "id": "ef9b"
     },
     {
       "imeUdruge": "Šumarak",
+      "adresa": "Splitska 3",
+      "lokacija": "Makarska",
       "id": "88f5"
+    },
+    {
+      "id": "5dd8",
+      "imeUdruge": "Crveni Križ",
+      "adresa": "Ruđera Boškovića 17",
+      "lokacija": "Split"
     }
   ],
   "volonteri": [

@@ -2,24 +2,23 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Pocetna from "./pages/Pocetna";
 import Aktivnosti from "./pages/Aktivnosti";
-import Aktivnost from "./pages/Aktivnost";
 import NotFound from "./pages/NotFound";
 import Volonteri from "./pages/Volonteri";
 import Udruge from "./pages/Udruge";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import UrediFormu from "./components/UrediFormu";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Volonter from "./pages/Volonter";
 
 function App() {
   const [aktivnosti, setAktivnosti] = useState([]);
   const [volonteri, setVolonteri] = useState([]);
+  const [udruge, setUdruge] = useState([]);
 
   useEffect(() => {
     fetchAktivnosti();
     fetchVolontere();
+    fetchUdruge();
   }, []);
 
   const fetchAktivnosti = async () => {
@@ -40,6 +39,15 @@ function App() {
     }
   };
 
+  const fetchUdruge = async () => {
+    try {
+      const response = await axios.get("http://localhost:3007/udruge");
+      setUdruge(response.data);
+    } catch (error) {
+      console.error("Error fetching udruge:", error);
+    }
+  };
+
   const obrisiAktivnost = (idPodatka) => {
     axios.delete(`http://localhost:3007/aktivnosti/${idPodatka}`).then(() => {
       fetchAktivnosti();
@@ -49,6 +57,12 @@ function App() {
   const obrisiVolontera = (idPodatka) => {
     axios.delete(`http://localhost:3007/volonteri/${idPodatka}`).then(() => {
       fetchVolontere();
+    });
+  };
+
+  const obrisiUdrugu = (idPodatka) => {
+    axios.delete(`http://localhost:3007/udruge/${idPodatka}`).then(() => {
+      fetchUdruge();
     });
   };
 
@@ -71,7 +85,6 @@ function App() {
               }
             />{" "}
             {/* index means the path is whatever the parent is  */}
-            {/* <Route path="aktivnost/uredi/:id" element={<UrediFormu />} /> */}
           </Route>
           <Route path="/volonteri">
             <Route
@@ -85,9 +98,20 @@ function App() {
                 />
               }
             />
-            <Route path="volonter/:id" element={<Volonter />} />
           </Route>
-          <Route path="/udruge" element={<Udruge />} />
+          <Route path="/udruge">
+            <Route
+              index
+              element={
+                <Udruge
+                  udruge={udruge}
+                  dodajUdrugu={setUdruge}
+                  obrisiUdrugu={obrisiUdrugu}
+                  fetchUdruge={fetchUdruge}
+                />
+              }
+            />
+          </Route>
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
         <Footer />
